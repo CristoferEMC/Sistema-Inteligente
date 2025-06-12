@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Inteligente</title>
+    <script src="chatbot.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-title">
+            🤖 Asistente Virtual
+        </div>
+        <div class="logo-wrapper">
+            <div class="logo-circle"></div>
+            <img src="img/logo.png" alt="Logo Municipalidad" class="topbar-logo">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <div class="section-header"></div>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Mensajes del chat -->
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <div id="previewBox" class="preview-box" style="display: none;">
+                        <div id="previewContent"></div>
+                    </div>
+
+                    <div class="textarea-container">
+                        <textarea id="chatInput" rows="1" class="chat-input"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <div class="buttons-container">
+                        <div class="upload-wrapper">
+                            <button id="addBtn" class="chat-add-btn">+</button>
+                            <div id="fileUploadBox" class="file-upload-box">
+                                <label for="fileInputArchivo" class="btn">📁 Subir archivo</label><br>
+                                <label for="fileInputImagen" class="btn">🖼️ Subir imagen</label>
+                                <input type="file" id="fileInputArchivo" style="display: none;">
+                                <input type="file" id="fileInputImagen" style="display: none;">
+                            </div>
+                        </div>
+                        <button id="sendBtn" class="chat-send-btn">➤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

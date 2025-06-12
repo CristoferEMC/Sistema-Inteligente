@@ -1,0 +1,271 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f9fc;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e60000;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* Botón de menú hamburguesa */
+.menu-btn {
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Título de topbar */
+.topbar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+/* Logo */
+.logo-wrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.topbar-logo {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 60%;
+    margin: 0px auto;
+}
+
+/* Sección */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Chat */
+.chat-messages {
+    height: calc(100vh - 240px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mensajes del chat */
+.message {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+    cursor: default;
+}
+
+/* Mensaje del usuario */
+.user-message {
+    background-color: #ff0f0f;
+    color: #ffffff;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Mensaje del sistema (IA) */
+.system-message {
+    color: #000000;
+    align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* Input y botón de chat */
+.chat-input-container {
+    width: 60%;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    background: #c2c2c2;
+    z-index: 1000;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+
+
+/* Contenedor del textarea */
+.textarea-container {
+    flex-grow: 1;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 1px 5px;
+    min-height: 20px;
+    max-height: 70px;
+    border: 0px solid #ccc;
+    border-radius: 12px;
+    background: #f0f0f0;
+    font-size: 15px;
+    resize: none;
+    line-height: 1.5;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+}
+
+.chat-input:focus {
+    outline: none;
+}
+
+.chat-input-container {
+    background: #f0f0f0;
+    /* más neutro que gris oscuro */
+}
+
+
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.chat-add-btn,
+.chat-send-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+/* Botones generales */
+.btn {
+    padding: 12px 18px;
+    background: rgb(218, 0, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.chat-messages {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Desactiva overflow lateral */
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+.upload-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.file-upload-box {
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1001;
+    width: 180px;
+}
+
+.file-upload-box .btn {
+    display: block;
+    width: auto;
+    background-color: #d6d6d6;
+    text-align: center;
+}
+
+.file-upload-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.preview-box {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.preview-box img {
+    max-width: 50%;
+    max-height: 50px;
+    display: block;
+}
